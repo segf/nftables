@@ -2030,6 +2030,7 @@ type_identifier		:	STRING	{ $$ = $1; }
 			|	DSCP	{ $$ = xstrdup("dscp"); }
 			|	ECN	{ $$ = xstrdup("ecn"); }
 			|	CLASSID { $$ = xstrdup("classid"); }
+			|	ZONE	{ $$ = xstrdup("zone"); }
 			;
 
 hook_spec		:	TYPE		STRING		HOOK		STRING		dev_spec	prio_spec

@@ -74,6 +74,7 @@ static const struct datatype *datatypes[TYPE_MAX + 1] = {
 	[TYPE_TIME_DATE]	= &date_type,
 	[TYPE_TIME_HOUR]	= &hour_type,
 	[TYPE_TIME_DAY]		= &day_type,
+	[TYPE_ZONE]		= &zone_type,
 };
 
 const struct datatype *datatype_lookup(enum datatypes type)
@@ -1328,4 +1329,13 @@ const struct datatype policy_type = {
 	.name		= "policy",
 	.desc		= "policy type",
 	.parse		= policy_type_parse,
+};
+
+const struct datatype zone_type = {
+	.type		= TYPE_ZONE,
+	.name		= "zone",
+	.desc		= "conntrack zone",
+	.size		= 2 * BITS_PER_BYTE,
+	.byteorder	= BYTEORDER_HOST_ENDIAN,
+	.basetype	= &integer_type,
 };

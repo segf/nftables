@@ -287,7 +287,7 @@ const struct ct_template ct_templates[__NFT_CT_MAX] = {
 					      BYTEORDER_HOST_ENDIAN, 64),
 	[NFT_CT_AVGPKT]		= CT_TEMPLATE("avgpkt", &integer_type,
 					      BYTEORDER_HOST_ENDIAN, 64),
-	[NFT_CT_ZONE]		= CT_TEMPLATE("zone", &integer_type,
+	[NFT_CT_ZONE]		= CT_TEMPLATE("zone", &zone_type,
 					      BYTEORDER_HOST_ENDIAN, 16),
 	[NFT_CT_EVENTMASK]	= CT_TEMPLATE("event", &ct_event_type,
 					      BYTEORDER_HOST_ENDIAN, 32),
